@@ -1,16 +1,22 @@
 import java.util.*;
 public class Wordwise
 {
+    // Class level variable to accept sentence
     String str;
     Wordwise()
     {
         this.str = "I am Bob";
     }
+
+    // Accepting sentence from user
     void readsent()
     {
+        System.out.println("Enter a sentence:");
         Scanner sc = new Scanner(System.in);
         this.str = sc.nextLine();
     }
+
+    // Finds frequency of vowels
     int freq_vowel(String w)
     {
         int count = 0;
@@ -25,6 +31,10 @@ public class Wordwise
         }
         return count;
     }
+    
+    /* Arranges the words in sentences
+     * And finds frequency of vowels in words
+     */
     public void arrange() 
     {
         String[] words = new String[str.length()];
@@ -56,5 +66,5 @@ public class Wordwise
         Wordwise obj = new Wordwise();
         obj.readsent();
         obj.arrange();
-    }
-}
+    } // main closed
+} // class closed
